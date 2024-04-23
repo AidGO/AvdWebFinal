@@ -1,0 +1,205 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body
+{
+    margin: 0%;
+    background-color: #212120;
+    color: #ffffff;
+    font-family: Verdana, Arial, sans-serif;
+    padding: 0;
+
+    height: auto;
+    min-height: 100vh;
+}
+
+.aboutme
+{
+    margin: 0; 
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.homeHeight
+{
+    
+    height: 72%;
+}
+.aboutHeight
+{
+    height: 100%;
+}
+
+img
+{
+    border: solid 5px #fff;
+}
+
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header
+{
+    position: fixed; top: 0;
+	width: 100%;
+    
+
+    background-color: #313030;
+    height: 150px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+/* .header-img-container{
+	position: relative;
+	width: inherit;
+	height: 300px;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-img-container img{
+	position: absolute;
+	top: 0;
+	left:0;
+	width:inherit;
+	object-fit: fill;
+	z-index: -10;
+} */
+
+h1
+{   
+    padding-top: 45px;
+    font-size: 3em;
+    color: #fff;
+}
+
+h2
+{
+    margin: 0   ;
+    padding-top: 5px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+p
+{
+    padding-left: 3em;
+    padding-bottom: 3vh;
+}
+
+div
+{
+    margin: 0;
+}
+
+ul
+{
+    padding-left: 3em;
+    padding-right: 2em;
+    margin: 0;
+}
+
+nav
+{
+    padding-top: 10px;
+    font-size: 1.5em;
+    width: 200px;
+    float: left;
+    position: fixed;
+
+    text-align: center;
+    font-weight: bold;
+    background-color: #1d1d1d;
+    border-right: 2px solid #3e3d3d;
+    height: 80vh;
+    margin-top: 150px;
+}
+
+body nav {
+    min-height: fit-content;
+}
+
+nav a:link {color: #ffffff;}
+nav a:visited {color: #545454;}
+nav a:hover {color: #ffa3a3;}
+
+footer a:link {color: #ffffff;}
+footer a:visited {color: #545454;}
+footer a:hover {color: #ffa3a3;}
+
+nav a
+{
+    text-decoration: none;
+}
+
+nav ul 
+{ 
+    margin-left: 0;
+    padding: 10px;
+    padding-left: 0;
+    list-style-type: none; 
+}
+
+.container .box 
+{
+    width:auto;
+    margin-right: auto;
+    margin-left: auto;
+    display:table;
+    padding-left: 4.5em;
+}
+.container .box .box-row 
+{
+    display:table-row;
+}
+.container .box .box-cell 
+{
+    display:table-cell;
+    width:50%;
+    padding:10px;
+}
+
+footer
+{
+    border-top: 2px solid #ffffff;
+    background-color: #313030;
+    color: #fff;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.floatleft
+{
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+main
+{
+    padding-bottom: 2em;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-left: 200px;
+    background-color: #212120;
+    padding-top: 150px; 
+}

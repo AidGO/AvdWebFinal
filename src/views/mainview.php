@@ -1,7 +1,8 @@
 <main>
-    <?php foreach($data['articles'] as $article){ ?>
-        <h2><?php echo $article['title']?></h2>
-            <p><?php echo $article['content']?></p>
-    <?php } ?>
+    <h2><?php echo (isset($article['title'])) ? $article['title'] : null; ?></h2>
+    <p><?php echo (isset($article['content'])) ? $article['content'] : null;?></p>
+    <p><?php echo (isset($article['languages'])) ? $article['languages'] : null;?></p>
+    <a href="<?php echo (isset($article['link'])) ? $article['link'] : null;?>">
+        <?php echo (isset($article['link'])) ? 'See More' : null;?>
+    </a>
 </main>
-<?php include_once('footerview.php') ?>

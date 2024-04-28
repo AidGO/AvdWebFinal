@@ -2,17 +2,17 @@
 session_start();
 if (!isset($_SESSION['user']))
 {
-    header('location: login.php');
+	header('location: ../../articles/admin.php');
 };
 
-$config = parse_ini_file('../config.ini', true);
+$config = parse_ini_file('../../config.ini', true);
 $environment = $config['ENVIRONMENT'];
 $URL_BASE = $config[$environment]['URL_BASE'];
 define('URL_ROOT', "$URL_BASE");
-define('APP_ROOT', dirname(__FILE__,2));
+define('APP_ROOT', dirname(__FILE__,3));
+include_once(APP_ROOT . '/src/services/database.controller.php');
 
 //Pull database credentials from config.ini
-include_once(APP_ROOT . '/src/services/database.controller.php');
 $user = $config[$environment]['USERNAME'];
 $pass = $config[$environment]['PASSWORD'];
 $host = $config[$environment]['HOST'];
@@ -32,10 +32,24 @@ catch(PDOException $e)
 
 if (isset($database))
 {
-    $controller = new DatabaseController($database);
-    $controller->indexPage('Admin');
-    $data = $controller->fetchAll();
-    include_once(APP_ROOT . '/src/views/adminview.php');
+  $controller = new DatabaseController($database);
+  if (isset($_GET['id']))
+  {
+  try
+    {
+        $controller->deleteInfo($_GET['id']);
+        header('location: ../../articles/admin.php');
+    }
+    catch(PDOException $e)
+    {
+        echo "Entry Failed: " . $e->getMessage();
+        echo "<br><a href=\"../../articles/admin.php\">Admin Page</a>";
+    }
+  }
+  else
+  {
+    exit;
+  }
 }
 $conn = null;
 ?>

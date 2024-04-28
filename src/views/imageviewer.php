@@ -1,0 +1,1 @@
+<img src="<?php echo $imagePath ?>" alt="My Picture" width="500" height="600" class="center">

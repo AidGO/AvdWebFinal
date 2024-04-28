@@ -1,5 +1,3 @@
-<h1>Hello, PLEASE LOGIN</h1>
-<h3>Enter your login credentials</h3>
 <form method ="post">
     <label for="first">
             Username:
@@ -21,4 +19,4 @@
             Submit
         </button>
 </form>
-<?php include_once('footerview.php')?>
+<?php include_once(APP_ROOT . '/src/views/footerview.php'); ?>

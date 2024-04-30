@@ -27,6 +27,9 @@ if (isset($database))
 {
   $controller = new DatabaseController($database);
   $controller->indexPage('Arbo');
+  $controller->insertImage('../../media/reportview.jpg', 700, 350);
+  $controller->insertImage('../../media/mapview.jpg', 700, 350);
+  $controller->insertImage('../../media/createview.jpg', 700, 350);
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;

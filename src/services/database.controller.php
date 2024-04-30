@@ -8,7 +8,7 @@ class DatabaseController {
         $this->userModel = $userModel;
     }
 
-    public function indexPage(string $pageName) 
+    public function indexPage(string $pageName) : void
     {
         $data = $this->userModel->fetchSpecificPageInfo($pageName);
         include_once(APP_ROOT . '/src/views/headview.php');

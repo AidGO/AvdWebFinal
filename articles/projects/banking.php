@@ -27,6 +27,7 @@ if (isset($database))
 {
   $controller = new DatabaseController($database);
   $controller->indexPage('Banking Website');
+  $controller->insertImage('../../media/AWPbank.jpg');
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;

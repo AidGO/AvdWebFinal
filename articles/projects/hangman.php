@@ -27,6 +27,7 @@ if (isset($database))
 {
   $controller = new DatabaseController($database);
   $controller->indexPage('Hangman');
+  $controller->insertImage('../../media/hangman.jpg', 700, 350);
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;

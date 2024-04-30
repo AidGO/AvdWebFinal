@@ -1,3 +1,4 @@
+<h2>Contact Me</h2>
 <form method ="post">
     <label for="name">
         Name:
@@ -13,11 +14,6 @@
         id="email"
         name="email"
         placeholder="Enter your E-mail" required>
-    <button type="submit">
-        Submit
-    </button>
-    <br>
-    <br>
     <label for="content">
         Message Me:
     </label>
@@ -28,4 +24,7 @@
         maxlength="600" 
         required
         placeholder="600 characters max"></textarea>
+    <button type="submit">
+        Submit
+    </button>
 </form>

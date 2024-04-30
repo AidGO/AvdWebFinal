@@ -10,3 +10,5 @@
     <li><a href="<?php echo URL_ROOT . '/articles/contact.php' ?>">Contact</a></li>
   </ul>
 </nav>
+<?php include_once(APP_ROOT . '/src/views/contentbegin.php') ?>
+<main>

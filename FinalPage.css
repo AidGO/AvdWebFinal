@@ -4,38 +4,26 @@
 	box-sizing: border-box;
 }
 
-body
+html, body 
 {
-    margin: 0%;
+    height: 100%;
+    margin: 0;
+}
+
+body 
+{
     background-color: #212120;
     color: #ffffff;
     font-family: Verdana, Arial, sans-serif;
-    padding: 0;
-
-    height: auto;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.aboutme
-{
-    margin: 0; 
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.homeHeight
-{
-    
-    height: 72%;
-}
-.aboutHeight
-{
-    height: 100%;
-}
 
 img
 {
     border: solid 5px #fff;
+    margin-top: 20px;
 }
 
 .center
@@ -45,42 +33,28 @@ img
     margin-right: auto;
 }
 
+.content 
+{
+    flex: 1;
+    padding: 0 15%;
+    background-color: #ffffff;
+    background-image: url('media/background.jpg');
+    background-repeat: repeat;
+}
+
 header
 {
-    position: fixed; top: 0;
 	width: 100%;
-    
-
     background-color: #313030;
-    height: 150px;
+    height: auto;
     margin: 0;
     text-align: center;
     border-bottom: 2px solid #fff;
 }
 
-/* .header-img-container{
-	position: relative;
-	width: inherit;
-	height: 300px;
-	overflow: hidden;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.header-img-container img{
-	position: absolute;
-	top: 0;
-	left:0;
-	width:inherit;
-	object-fit: fill;
-	z-index: -10;
-} */
-
 h1
 {   
-    padding-top: 45px;
+    padding-top: 5px;
     font-size: 3em;
     color: #fff;
 }
@@ -106,31 +80,60 @@ div
     margin: 0;
 }
 
-ul
+ul 
 {
-    padding-left: 3em;
-    padding-right: 2em;
+    padding: 0;
     margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+label 
+{
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="title"],
+input[type="languages"],
+input[type="link"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] 
+{
+    padding: 10px 20px;
+    background-color: #545454;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover 
+{
+    background-color: #ffa3a3;
 }
 
 nav
 {
-    padding-top: 10px;
     font-size: 1.5em;
-    width: 200px;
-    float: left;
-    position: fixed;
 
     text-align: center;
     font-weight: bold;
     background-color: #1d1d1d;
-    border-right: 2px solid #3e3d3d;
-    height: 80vh;
-    margin-top: 150px;
+    border-bottom: 2px solid #3e3d3d;
 }
 
-body nav {
-    min-height: fit-content;
+body nav 
+{
+    width: 100%;
 }
 
 nav a:link {color: #ffffff;}
@@ -141,41 +144,30 @@ footer a:link {color: #ffffff;}
 footer a:visited {color: #545454;}
 footer a:hover {color: #ffa3a3;}
 
+main a:link {color: #ffffff;}
+main a:visited {color: #545454;}
+main a:hover {color: #ffa3a3;}
+
 nav a
 {
     text-decoration: none;
 }
 
-nav ul 
-{ 
-    margin-left: 0;
-    padding: 10px;
-    padding-left: 0;
-    list-style-type: none; 
+main a
+{
+    padding-left: 3em;
 }
 
-.container .box 
+ul li 
 {
-    width:auto;
-    margin-right: auto;
-    margin-left: auto;
-    display:table;
-    padding-left: 4.5em;
-}
-.container .box .box-row 
-{
-    display:table-row;
-}
-.container .box .box-cell 
-{
-    display:table-cell;
-    width:50%;
-    padding:10px;
+    display: inline;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 footer
 {
-    border-top: 2px solid #ffffff;
+    border-top: solid 2px #fff;
     background-color: #313030;
     color: #fff;
     font-size: .60em;
@@ -183,9 +175,8 @@ footer
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
-    position:fixed;
-    bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
 
 .floatleft
@@ -196,10 +187,44 @@ footer
 
 main
 {
-    padding-bottom: 2em;
+    padding-bottom: 0;
     padding-left: 15%;
-    padding-right: 15%;
-    margin-left: 200px;
+    padding-right: 15%; 
     background-color: #212120;
-    padding-top: 150px; 
+    padding-top: 50px; 
+    flex: 1;
+    min-height: calc(100vh - 141px)
+}
+
+.table-container 
+{
+    overflow-x: auto;
+}
+
+table 
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td 
+{
+    padding: 8px;
+    word-wrap: break-word;
+}
+
+tbody tr:nth-child(even) 
+{
+    background-color: #2e2e2e;
+}
+
+tbody tr:hover 
+{
+    background-color: #000000;
+}
+
+th 
+{
+    background-color: #333;
+    color: #fff;
 }

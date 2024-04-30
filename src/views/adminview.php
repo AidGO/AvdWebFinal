@@ -1,20 +1,19 @@
-<body>  
     <h2>Create New Record</h2>
     <form action="../src/scripts/create.php" method="POST">
         <label for="page">Page:</label>
-        <input type="text" id="page" name="page" required>
+        <input type="text" id="page" name="page" placeholder="must fill" required>
         <label for="title">Title:</label>
         <input type="title" id="title" name="title">
         <label for="languages">Languages:</label>
         <input type="languages" id="languages" name="languages">
         <label for="link">Link:</label>
         <input type="link" id="link" name="link">
-        <button type="submit">Create</button>
-        <br>
         <label for="content">Content:</label>
-        <textarea id="content" name="content" rows="4" style ="width: 100%" maxlength="600"></textarea>
+        <textarea id="content" name="content" rows="4" style ="width: 100%" maxlength="600" placeholder="600 chars max"></textarea>
+        <button type="submit">Create</button>
     </form>
     <h2>Existing Records</h2>
+    <div class="table-container">
     <table border="1">
         <thead>
             <tr>
@@ -44,6 +43,6 @@
         ?>
         </tbody>
     </table>
-</body>
+        </div>
 </html>
 <?php include_once(APP_ROOT . '/src/views/footerview.php'); ?>

@@ -26,8 +26,9 @@ catch(PDOException $e)
 if (isset($database))
 {
   $controller = new DatabaseController($database);
-  $controller->indexPage('Projects');
+  $controller->indexPage('Contact');
+  include_once(APP_ROOT . '/src/views/contactview.php');
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;
-?>
+?> 

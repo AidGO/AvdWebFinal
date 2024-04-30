@@ -16,7 +16,6 @@ try
 {
 	$conn = new PDO("mysql:host=$host;dbname=$name", $user, $pass);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	echo "Connected Successfully", PHP_EOL;
   $database = new DatabaseService($conn);
 } 
 catch(PDOException $e)
@@ -28,6 +27,7 @@ if (isset($database))
 {
   $controller = new DatabaseController($database);
   $controller->indexPage('Home');
+  include_once(APP_ROOT . '/src/scripts/API.php');
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;

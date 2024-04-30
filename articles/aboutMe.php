@@ -16,7 +16,6 @@ try
 {
 	$conn = new PDO("mysql:host=$host;dbname=$name", $user, $pass);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	echo "Connected Successfully", PHP_EOL;
   $database = new DatabaseService($conn);
 } 
 catch(PDOException $e)
@@ -28,9 +27,7 @@ if (isset($database))
 {
   $controller = new DatabaseController($database);
   $controller->indexPage('About Me');
-  //$controller->insertImage(APP_ROOT . '/media/Senior Pic.png');
-  $imagePath = APP_ROOT . '/media/Senior Pic.png';
-  include(APP_ROOT . '/src/views/imageviewer.php');
+  $controller->insertImage('../media/SeniorPic.png', 500, 600);
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;

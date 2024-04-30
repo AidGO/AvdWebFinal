@@ -24,14 +24,25 @@ class DatabaseController {
         return $pageQuery;
     }
 
-    public function insertImage(string $imagePath)
+    public function insertImage(string $imagePath, $imageWidth, $imageHeight)
     {
-        include($imagePath);
+        $width = $imageWidth;
+        $height = $imageHeight;
+        $path = $imagePath;
+        include(APP_ROOT . '/src/views/imageviewer.php');
     }
 
     public function createInfo(string $page, string $title, string $content, string $languages, string $link) : void
     {
-        $this->userModel->createRecord($page, $title, $content, $languages, $link);
+        if (strlen($link) == 0)
+        {
+            $newlink = null;
+            $this->userModel->createRecord($page, $title, $content, $languages, $newlink);
+        }
+        else
+        {
+            $this->userModel->createRecord($page, $title, $content, $languages, $link);
+        }
     }
 
     public function validateLogin(string $name, string $password) : bool

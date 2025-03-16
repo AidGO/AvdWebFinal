@@ -1,4 +1,3 @@
-    <h2>Create New Record</h2>
     <form action="../src/scripts/create.php" method="POST">
         <label for="page">Page:</label>
         <input type="text" id="page" name="page" placeholder="must fill" required>

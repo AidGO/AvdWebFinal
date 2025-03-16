@@ -27,7 +27,7 @@ if (isset($database))
 {
   $controller = new DatabaseController($database);
   $controller->indexPage('Home');
-  include_once(APP_ROOT . '/src/scripts/API.php');
+  //include_once(APP_ROOT . '/src/scripts/API.php');
   include_once(APP_ROOT . '/src/views/footerview.php');
 }
 $conn = null;

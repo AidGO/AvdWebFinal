@@ -1,0 +1,275 @@
+:root{
+    --primary: #FF7F11;
+    --accent: #FF9F1C;
+    --contrast: #332C2C;
+    --background: #ffdda7;
+    --background-accent: #ffd38d;
+    --text: #4A2F27;
+}
+
+footer,
+header
+{
+  display: block;
+}
+
+body
+{
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+
+    font-family: monospace;
+    background: linear-gradient(to bottom, white, var(--background));
+    color: var(--text);
+}
+
+.title {
+    padding-top: 0; 
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1100%;
+    font-weight: bold;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: var(--text);
+    margin: 10px;
+}
+
+nav
+{
+    position: absolute;
+    top: 25%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+nav a
+{
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: var(--primary);
+}
+
+.nav-ul
+{   
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-ul li
+{
+    font-size: large;
+    display: inline-block;
+    padding-left: 3px;
+}
+
+ /*
+.sidebar
+{
+    position: absolute;
+    width: 50px;
+    display: none;
+}
+*/
+
+.content
+{
+    padding-bottom: 30px;
+}
+
+.content h2
+{
+    font-size: xx-large;
+    text-align: center;
+    color: var(--primary);
+    padding: 10px;
+    margin: 0;
+}
+
+.block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block p
+{
+    font-size: larger;
+    width: 50%;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.block a
+{
+    padding-bottom: 10px;
+    font-size: larger;
+    color: var(--text);
+    width: 50%;
+}
+
+.block a:hover
+{
+    color: var(--primary);
+}
+
+.block:nth-child(odd)
+{
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    background-color: rgba(255, 255, 255, .5);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.block:nth-child(even)
+{
+    background-color: var(--background);
+    border-top: 3px solid var(--background-accent);
+    border-bottom: 3px solid var(--background-accent);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.block img
+{
+    border: 3px solid var(--text);
+    margin: 10px;
+}
+.graphic1
+{
+    padding-left: 10%;
+}
+
+.graphic2
+{
+    padding-left: 60%;
+}
+
+.rectangle {
+    position: fixed;
+    background: transparent;
+    border:5px solid white;
+    border-radius: 1%;
+
+    bottom: 0;
+    width: 35%;
+    height: 30%;
+    padding-bottom: 15%;
+    animation: oscillateXY 3s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+.rectangle:nth-child(2) {
+    bottom: 20%;
+    animation-duration: 4s;
+}
+
+.rectangle:nth-child(3) {
+    bottom: 40%;
+    animation-duration: 5s;
+}
+
+@keyframes oscillateXY {
+    0% 
+    {
+        transform: translate(-50px, -50px);
+    }
+    100% 
+    {
+        transform: translate(50px, 50px);
+    }
+}
+
+footer
+{
+    position:fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--background);
+    border-top: 3px solid var(--background-accent);
+    color: var(--text);
+    width: 100%;
+}
+
+footer a
+{
+    color: var(--text);
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+    justify-content: center;
+    padding-left: 25%;
+    padding-top: 30px;
+}
+
+button[type="submit"] 
+{
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: var(--text);
+    cursor: pointer;
+    align-items: center;
+}
+
+button[type="submit"]:hover 
+{
+    background-color: var(--accent);
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) 
+{
+    .title
+    {
+        font-size: 500%;
+    }
+
+    .nav-ul
+    {
+        align-items: center;
+        text-align: center;
+    }
+
+    .block p
+    {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .block a
+    {
+        padding-left: 0;
+        width: 100%;
+    }
+}

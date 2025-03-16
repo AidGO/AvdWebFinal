@@ -7,15 +7,10 @@
     --text: #4A2F27;
 }
 
-footer,
-header
-{
-  display: block;
-}
-
 body
 {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     margin: 0;
 
@@ -24,8 +19,15 @@ body
     color: var(--text);
 }
 
+header
+{
+    padding: 0;
+    margin: 0;
+}
+
 .title {
-    padding-top: 0; 
+    margin-top: 5%;
+    margin-bottom: 0;
     font-family: monospace;
     display: flex;
     align-items: center;
@@ -45,8 +47,10 @@ body
 
 nav
 {
-    position: absolute;
-    top: 25%;
+    margin-bottom: 5%;
+    top: 0;
+    display: flex;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0);
     width: 100%;
 }
@@ -64,14 +68,13 @@ a:hover
 
 .nav-ul
 {   
-    text-align: center;
     padding: 0;
     margin: 0;
 }
 
 .nav-ul li
 {
-    font-size: large;
+    font-size: 18px;
     display: inline-block;
     padding-left: 3px;
 }
@@ -92,7 +95,7 @@ a:hover
 
 .content h2
 {
-    font-size: xx-large;
+    font-size: 32px;
     text-align: center;
     color: var(--primary);
     padding: 10px;
@@ -108,7 +111,7 @@ a:hover
 
 .block p
 {
-    font-size: larger;
+    font-size: 21px;
     width: 50%;
     margin-bottom: 0;
     margin-top: 0;
@@ -118,7 +121,7 @@ a:hover
 .block a
 {
     padding-bottom: 10px;
-    font-size: larger;
+    font-size: 21px;
     color: var(--text);
     width: 50%;
 }
@@ -264,12 +267,12 @@ textarea {
     .block p
     {
         padding-left: 0;
-        width: 100%;
+        width: 90%;
     }
 
     .block a
     {
         padding-left: 0;
-        width: 100%;
+        width: 90%;
     }
 }
